@@ -1,0 +1,662 @@
+@import url('https://fonts.googleapis.com/css2?family=Prata&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    overflow-x: hidden;
+    font-family: Arial, sans-serif;
+    color: #FFFF;
+    
+}
+
+.wrapper {
+    width: 100%;
+    max-width: 1920px;
+    margin: 0 auto;
+}
+
+/* Header Styles */
+#header {
+    position: fixed;
+    width: 100%;
+    left: 0;
+    top: 0;
+    z-index: 1000;
+    transition: all 0.3s ease;
+    background-color: transparent;
+    padding: 1.5rem 0;
+}
+
+#header.scrolled {
+    background-color: rgba(34, 34, 34, 0.9);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 0.625rem 0;
+}
+
+.header-content {
+    width: 100%;
+    max-width: 100rem;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.logo{
+    margin-right: 6.25rem;
+}
+.logo-nav {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.logo span {
+    font-size: 2.25rem;
+    font-family: "Prata", sans-serif;
+    color: #FFFF;
+}
+
+.mobile-menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 2rem;
+    cursor: pointer;
+    margin-left: 40%;
+}
+
+.navigation ul {
+    
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+.navigation a {
+    text-decoration: none;
+    color: #FFFF;
+    font-size: 1.25rem;
+    font-style: italic;
+    transition: opacity 0.3s;
+}
+
+.navigation a:hover {
+    opacity: 0.8;
+}
+
+/* Main Content Styles */
+.container {
+    background-color: #222222;
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+   
+}
+
+.information {
+    width: 50%;
+    padding: 2rem;
+    position: relative;
+    z-index: 600;
+    padding-left: 10.125rem;
+}
+
+.information h2 {
+    margin-top: 14rem;
+    font-family: "Prata", sans-serif;
+    font-size: 5rem;
+    font-weight: 400;
+    line-height: 1.1;
+    margin-bottom: 1rem;
+}
+
+.information h3 {
+    font-size: 3.125rem;
+    font-weight: 400;
+    margin-bottom: 1.5rem;
+}
+
+.benefits-list {
+    list-style: none;
+    margin-bottom: 2rem;
+}
+
+.benefits-list li {
+    position: relative;
+    padding-left: 3.125rem;
+    margin-bottom: 1rem;
+}
+
+.benefits-list li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 2.5rem;
+    height: 2.5rem;
+    background-image: url('/picture/icon_check.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.coach{
+    font-size: 4rem;
+    text-align: center;
+    display:none;
+}
+.benefits-list p {
+    font-size: 1.5rem;
+    line-height: 1.5;
+}
+
+.benefits-list span {
+    font-family: "Prata", sans-serif;
+    font-size: 2.5rem;
+}
+
+.join-btn {
+    width: 14.3rem;
+    height: 6rem;
+    border-radius: 0.25rem;
+    border: none;
+    font-family: Arial, sans-serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+    background-color: white;
+    color: #222222;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.join-btn:hover {
+    background-color: #EFCFAD;
+    color: white;
+}
+
+.main-image {
+    width: 50%;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.main-image img {
+    height: 100%;
+    width: auto;
+    max-height: 100vh;
+}
+
+.window {
+    width: 100%;
+    height: 6.25rem;
+    background-color: #282829;
+}
+
+/* Info About Us Styles */
+.Info_About_Us {
+    width: 100%;
+    background-color: #282829;
+    min-height: 45.5rem;
+    display: flex;
+    padding: 2rem 0; /* Убрали боковые padding */
+}
+
+.Info_About_Us .picture {
+    width: 25%;
+    display: flex;
+    overflow: hidden; /* Обрезаем лишнее если изображение выходит за границы */
+}
+
+.Info_About_Us .picture img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Заполняем весь блок с сохранением пропорций */
+}
+
+.Info_About_Us .text {
+    width: 50%;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Центрируем содержимое */
+    text-align: center; /* Выравниваем текст по центру */
+}
+
+.Info_About_Us .text h3 {
+    font-size: 3rem;
+    margin-bottom: 2rem;
+    width: 100%; /* Занимает всю ширину текстового блока */
+}
+
+.features-list {
+    list-style: none;
+    margin-bottom: 2rem;
+    width: 100%; /* Занимает всю ширину текстового блока */
+}
+
+.features-list li {
+    position: relative;
+    padding-left: 3.125rem;
+    margin-bottom: 1.5rem;
+    font-size: 1.5rem;
+    line-height: 1.5;
+    text-align: left; /* Текст пунктов списка выравниваем по левому краю */
+}
+.features-list li::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 2.5rem;
+    height: 2.5rem;
+    background-image: url('/picture/Marker.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.full-width-btn {
+    width: 100%; 
+    max-width: 400px; 
+    margin: 0 auto; 
+}
+
+/* Убираем маркеры для мобильной версии */
+@media (max-width: 768px) {
+    
+    
+    .coach{
+        display:block;
+    }
+    .Info_About_Us {
+        flex-direction: column;
+    }
+    
+    .Info_About_Us .picture,
+    .Info_About_Us .text {
+        width: 100%;
+    }
+    
+    .features-list li {
+        padding-left: 0;
+        text-align: center;
+    }
+    
+    .features-list li::before {
+        display: none;
+    }
+}
+
+/* Work With Us Styles */
+.Work_Out_With_Us {
+    width: 100%;
+    background-color: #282829;
+    min-height: 39.25rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+}
+.Work_Out_With_Us .image-Work_Us{
+    width:50%;
+}
+.Work_Out_With_Us img{
+    margin-bottom: 3.125rem;
+}
+.contact-form {
+    width: 100%;
+    max-width: 99.8rem;
+    background-color: #FFFF;
+    padding: 3rem;
+    color: #222222;
+}
+
+.contact-form h3 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"] {
+    width: 100%;
+    padding: 1rem;
+    margin-bottom: 1.5rem;
+    font-size: 1.2rem;
+    border: 1px solid #ccc;
+}
+
+.checkbox-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+.checkbox-container input {
+    margin-right: 0.5rem;
+}
+
+.submit-btn {
+    width: 100%;
+    padding: 1rem;
+    font-size: 1.2rem;
+    background-color: #222222;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.submit-btn:hover {
+    background-color: #EFCFAD;
+}
+/*footer*/
+footer {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1920px;
+    height: 20.56rem;
+    background-color: #222222;
+    color: white;
+    font-family: Arial, sans-serif;
+}
+
+.line {
+    border: none;
+    border-top: 1px solid #444;
+    margin: 0;
+}
+
+.Mini-navigation {
+    font-size: 1.25rem;
+    padding: 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navigation ul {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.navigation a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.navigation a:hover {
+    color: #ccc;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 2rem 5rem;
+    height: calc(100% - 5.5rem); 
+}
+
+.footer-left {
+    display: flex;
+    flex-direction: column;
+}
+
+.logo {
+    font-size: 2rem;
+    font-weight: bold;
+    color: white;
+}
+
+.copyright {
+    margin-top: 35px;
+    font-size: 0.875rem;
+    color: #aaa;
+}
+
+.footer-center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.social-icons {
+    display: flex;
+    gap: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.social-icons a {
+    color: white;
+    font-size: 1.5rem;
+    transition: color 0.3s;
+}
+
+.social-icons a:hover {
+    color: #ccc;
+}
+
+.privacy-link {
+    color: #aaa;
+    font-size: 0.875rem;
+    text-decoration: none;
+}
+
+.privacy-link:hover {
+    text-decoration: underline;
+}
+
+.footer-right {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.join-button {
+    background-color: white;
+    color: black;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.join-button:hover {
+    background-color: #EFCFAD;
+}
+
+.terms-link {
+    margin-top: 1rem;
+    color: #aaa;
+    font-size: 0.875rem;
+    text-decoration: none;
+}
+
+.terms-link:hover {
+    text-decoration: underline;
+}
+
+/* Tablet and below */
+@media (max-width: 1024px) {
+    .information{
+        width: 100%;
+    }
+    .main-image
+    {
+        display:none;
+    }
+    .Work_Out_With_Us img{
+        display:none;
+    }
+    .information h2 {
+        font-size: 3.5rem;
+    }
+    
+    .information h3 {
+        font-size: 2.5rem;
+    }
+    
+    .benefits-list p,
+    .features-list li {
+        font-size: 1.2rem;
+    }
+    
+    .Info_About_Us .text {
+        width: 100%;
+        order: 1;
+    }
+    
+    .Info_About_Us .picture {
+        width: 50%;
+    }
+}
+
+
+@media (max-width: 768px) {
+    .footer-center{
+        display:none;
+    }
+    .main-image{
+        display:none;
+    }
+    .header-content {
+        padding: 15px 5%;
+    }
+    .information,
+    .main-image {
+        width: 100%;
+        padding: 1rem;
+    }
+    
+    .information {
+        padding-top: 2rem;
+    }
+    
+    .information h2 {
+        font-size: 2.5rem;
+    }
+    
+    .information h3 {
+        font-size: 1.8rem;
+    }
+    
+    .benefits-list li {
+        padding-left: 2.5rem;
+    }
+    
+    .benefits-list li::before {
+        width: 2rem;
+        height: 2rem;
+    }
+    
+    .join-btn {
+        width: 100%;
+        height: 4rem;
+        font-size: 1.2rem;
+    }
+    
+    .Info_About_Us .picture {
+        width: 100%;
+    }
+    
+    .features-list li {
+        padding-left: 2.5rem;
+        font-size: 1rem;
+    }
+    
+    .features-list li::before {
+        width: 2rem;
+        height: 2rem;
+    }
+    
+    .contact-form {
+        padding: 1.5rem;
+    }
+    
+    .contact-form h3 {
+        font-size: 1.8rem;
+    }
+}
+@media(max-width: 670px)
+{
+    .mobile-menu-toggle {
+        display: block;
+        
+    }
+    
+    .navigation {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: #222222;
+        padding: 1rem;
+    }
+    
+    .navigation.active {
+        display: block;
+    }
+    
+    .navigation ul {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    .container {
+        flex-direction: column;
+        padding-top: 100px;
+    }
+}
+/* Small mobile devices */
+@media (max-width: 480px) {
+    .logo{
+        margin-right: 1.25rem;
+    }
+    .footer-content
+    {
+        padding: 0;
+    }
+    .mobile-menu-toggle {
+        display: block;
+        
+    }
+    .information h2 {
+        font-size: 2rem;
+    }
+    
+    .information h3 {
+        font-size: 1.5rem;
+    }
+    
+    .benefits-list p {
+        font-size: 1rem;
+    }
+    
+    .benefits-list span {
+        font-size: 1.8rem;
+    }
+    
+    .Info_About_Us .text h3 {
+        font-size: 2rem;
+    }
+    
+    .contact-form h3 {
+        font-size: 1.5rem;
+    }
+}
