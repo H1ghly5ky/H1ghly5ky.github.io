@@ -27,5 +27,5 @@ document.addEventListener('DOMContentLoaded', function() {
         lastScroll = currentScroll;
     });
 
-    // Остальной код (мобильное меню и т.д.) остается без изменений
+    
 });
